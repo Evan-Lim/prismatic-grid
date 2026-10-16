@@ -1,0 +1,23 @@
+# --- Python / Backend ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+township.db
+township.db-journal
+.env
+
+# --- Node / Frontend ---
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

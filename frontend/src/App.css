@@ -1,0 +1,251 @@
+:root {
+  --bg-dark: #0b1120;
+  --bg-card: #111827;
+  --border: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --sdp-red: #e11d48;
+  --green: #10b981;
+  --yellow: #f59e0b;
+  --red: #ef4444;
+  --blue: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+}
+
+.dashboard {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.brand h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-live {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.kpi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.kpi-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.kpi-value {
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.kpi-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.1fr;
+  gap: 16px;
+}
+
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.panel-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.map-container {
+  height: 350px;
+  width: 100%;
+  background: #070b14;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-legend {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  background: #1e293b;
+  color: var(--text-main);
+  border: 1px solid #334155;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.15s;
+}
+
+.btn:hover, .btn.active {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.anomaly-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 310px;
+  overflow-y: auto;
+}
+
+.anomaly-item {
+  background: #172033;
+  border-left: 4px solid var(--red);
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
+.anomaly-item.medium {
+  border-left-color: var(--yellow);
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  height: 310px;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  background: #090e1a;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.msg {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+
+.msg.user {
+  background: var(--blue);
+  align-self: flex-end;
+  max-width: 85%;
+}
+
+.msg.assistant {
+  background: #1e293b;
+  align-self: flex-start;
+  max-width: 92%;
+}
+
+.tool-pill {
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  font-family: monospace;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.quick-queries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.chip {
+  background: #172033;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--blue);
+  color: white;
+}
+
